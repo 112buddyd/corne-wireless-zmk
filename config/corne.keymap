@@ -25,28 +25,11 @@
             bindings = <
   &kp TAB  &kp Q  &kp W     &kp E  &kp R      &kp T      &kp Y  &kp U      &kp I    &kp O     &kp P      &kp BSPC
 &kp LCTRL  &kp A  &kp S     &kp D  &kp F      &kp G      &kp H  &kp J      &kp K    &kp L  &kp SEMI       &kp SQT
-&kp LSHFT  &kp Z  &kp X     &kp C  &kp V      &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &lt 4 ESCAPE
-                         &kp LGUI  &mo 2  &kp SPACE    &kp RET  &mo 3   &kp RALT
+&kp LSHFT  &kp Z  &kp X     &kp C  &kp V      &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &lt 3 ESCAPE
+                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2   &kp RALT
             >;
 
             label = "qwerty";
-        };
-
-        colemak {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
-            bindings = <
-  &kp TAB  &kp Q  &kp W     &kp F  &kp P      &kp G      &kp J  &kp L      &kp U    &kp Y  &kp SEMICOLON  &kp BSPC
-&kp LCTRL  &kp A  &kp R     &kp S  &kp T      &kp D      &kp H  &kp N      &kp E    &kp I          &kp O   &kp SQT
-&kp LSHFT  &kp Z  &kp X     &kp C  &kp V      &kp B      &kp K  &kp M  &kp COMMA  &kp DOT       &kp FSLH   &kp ESC
-                         &kp LGUI  &mo 2  &kp SPACE    &kp RET  &mo 3   &kp RALT
-            >;
-
-            label = "clmk";
         };
 
         nmbrs {
@@ -60,7 +43,7 @@
 &kp GRAVE  &kp N1  &kp N2    &kp N3  &kp N4     &kp N5      &kp N6    &kp N7    &kp N8     &kp N9  &kp N0  &trans
    &trans   &none   &none     &none   &none      &none    &kp LEFT  &kp DOWN    &kp UP  &kp RIGHT   &none   &none
    &trans   &none   &none     &none   &none      &none       &none     &none     &none      &none   &none   &none
-                           &kp LGUI  &trans  &kp SPACE     &kp RET     &to 5  &kp RALT
+                           &kp LGUI  &trans  &kp SPACE     &kp RET     &to 0  &kp RALT
             >;
 
             label = "nmbrs";
@@ -85,35 +68,13 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp C_PREV    &kp C_PP  &kp C_NEXT  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &kp K_LOCK     &none     &none      &none  &none  &kp DEL
-     &none  &bt BT_PRV  &bt BT_NXT       &none         &none         &none      &kp LEFT  &kp DOWN    &kp UP  &kp RIGHT  &none    &none
- &kp LSHFT       &none       &none       &none         &none    &bt BT_CLR         &to 0     &to 1     &none      &none  &none   &trans
-                                      &kp LGUI        &trans     &kp SPACE         &to 6    &trans  &kp RALT
+&kp C_PREV    &kp C_PP  &kp C_NEXT  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &kp F1  &kp F2    &kp F3   &kp F4   &kp F5   &kp F6
+     &none  &bt BT_PRV  &bt BT_NXT       &none         &none         &none    &kp F7  &kp F8    &kp F9  &kp F10  &kp F11  &kp F12
+ &kp LSHFT       &none       &none       &none         &none    &bt BT_CLR     &none   &none     &none    &none    &none   &trans
+                                      &kp LGUI        &trans     &kp SPACE    &trans  &trans  &kp RALT
             >;
 
             label = "control";
-        };
-
-        nmpd {
-            bindings = <
-&none  &none  &none  &none  &none      &none    &kp BACKSPACE        &kp KP_N7        &kp KP_N8  &kp KP_NUMBER_9    &kp KP_DIVIDE  &kp KP_MULTIPLY
-&none  &none  &none  &none  &none      &none            &none        &kp KP_N4        &kp KP_N5        &kp KP_N6  &kp KP_SUBTRACT  &kp LS(KP_PLUS)
-&none  &none  &none  &none  &none      &none            &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3            &to 0            &to 1
-                     &none  &none  &kp SPACE        &kp ENTER  &kp KP_NUMBER_0       &kp KP_DOT
-            >;
-
-            label = "nmpd";
-        };
-
-        game {
-            bindings = <
-       &kp TAB  &trans   &kp W  &trans  &trans     &trans    &kp ESCAPE  &none  &none  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-        &trans   &kp A   &kp S   &kp D  &trans     &trans         &none  &none  &none       &none              &none            &none
-&kp LEFT_SHIFT  &trans  &trans  &trans  &trans     &trans         &none  &none  &none       &none              &to 0            &to 1
-                                 &none   &none  &kp SPACE         &none  &none  &none
-            >;
-
-            label = "game";
         };
     };
 };

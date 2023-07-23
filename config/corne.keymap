@@ -11,11 +11,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-
-        JK-Esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <19 20>;
-        };
     };
 
     keymap {
@@ -51,10 +46,10 @@
 
         special {
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT              &kp HASH             &kp DOLLAR  &kp PERCENT    &kp CARET     &kp AMPERSAND       &kp ASTERISK  &kp MINUS      &kp EQUAL  &trans
-   &trans     &none   &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS        &none        &none    &kp LEFT_BRACE    &kp RIGHT_BRACE      &none  &kp BACKSLASH   &none
-   &trans     &none   &none                 &none                  &none        &none        &none  &kp LEFT_BRACKET  &kp RIGHT_BRACKET      &none          &none   &none
-                                         &kp LGUI                 &trans    &kp SPACE      &kp RET            &trans           &kp RALT
+&kp TILDE  &kp EXCL  &kp AT   &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET     &kp AMPERSAND       &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS         &trans
+   &trans     &none   &none  &kp MINUS   &kp EQUAL        &none        &none    &kp LEFT_BRACE    &kp RIGHT_BRACE                 &none                  &none  &kp BACKSLASH
+   &trans     &none   &none      &none       &none        &none        &none  &kp LEFT_BRACKET  &kp RIGHT_BRACKET                 &none                  &none          &none
+                              &kp LGUI      &trans    &kp SPACE      &kp RET            &trans           &kp RALT
             >;
 
             label = "special";
